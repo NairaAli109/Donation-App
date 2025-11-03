@@ -28,21 +28,12 @@ class PreferencesHelper {
     return await _secureStorage.read(key: "token");
   }
 
-  /// Onboarding Viewed
-  static Future<void> markOnboardingAsViewed() async {
-    await _preferences?.setBool("Onboarding viewed", true);
+  ///selected app language
+  static Future<void> saveAppLanguage({required String language}) async {
+    _preferences?.setString("selectedLanguage", language);
   }
 
-  static bool? checkViewedOnboarding() {
-    return _preferences?.getBool("Onboarding viewed");
+  static String? getAppLanguage() {
+    return _preferences?.getString("selectedLanguage");
   }
-
-  static Future<void> setAccountAsVerified() async {
-    await _preferences?.setBool("Verified Account", true);
-  }
-
-  static bool? isAccountVerified() {
-    return _preferences?.getBool("Verified Account");
-  }
-
 }

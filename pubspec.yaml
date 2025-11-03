@@ -40,6 +40,9 @@ dependencies:
   shared_preferences: ^2.2.2
   flutter_secure_storage: ^9.2.2
 
+  flutter_localizations:
+    sdk: flutter
+
   build_runner: ^2.4.9
   intl:
 
@@ -62,8 +65,12 @@ dependencies:
 
   #design
   device_info_plus: ^11.5.0
+  internet_connection_checker: ^1.0.0+1
+
   skeletonizer: ^1.2.0
   flutter_svg: ^2.0.9
+
+
 
 
 
