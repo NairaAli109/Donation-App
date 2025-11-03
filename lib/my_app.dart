@@ -1,18 +1,21 @@
+import 'package:donation_app/core/helpers/general_functions.dart';
+import 'package:donation_app/core/routing/app_routes.dart';
+import 'package:donation_app/core/theming/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
-  // final AppRouter appRouter;
+  final AppRouter appRouter;
 
-  const MyApp({super.key, });
+  const MyApp({super.key, required this.appRouter, });
 
   @override
   Widget build(BuildContext context) {
-    // GeneralFunctions.setPreferredOrientation();
+    GeneralFunctions.setPreferredOrientation();
     return MaterialApp(
       scaffoldMessengerKey: scaffoldMessengerKey,
       debugShowCheckedModeBanner: false,
-      // onGenerateRoute: appRouter.generateRoute,
-      // theme: AppTheme.lightTheme,
+      onGenerateRoute: appRouter.generateRoute,
+      theme: AppTheme.lightTheme,
       builder: (context, child) {
         return MediaQuery(
           data: MediaQuery.of(
