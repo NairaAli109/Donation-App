@@ -28,12 +28,20 @@ class PreferencesHelper {
     return await _secureStorage.read(key: "token");
   }
 
-  ///selected app language
-  static Future<void> saveAppLanguage({required String language}) async {
-    _preferences?.setString("selectedLanguage", language);
+  /// app language
+  static Future<void> saveLang({required String? lang}) async {
+    _preferences?.setBool("hasLang", lang != null);
   }
 
-  static String? getAppLanguage() {
-    return _preferences?.getString("selectedLanguage");
+  static bool? hasLang() {
+    return _preferences?.getBool('hasLang');
   }
+
+  // static Future<void> saveAppLanguage({required String language}) async {
+  //   _preferences?.setString("selectedLanguage", language);
+  // }
+  //
+  // static String? getAppLanguage() {
+  //   return _preferences?.getString("selectedLanguage");
+  // }
 }

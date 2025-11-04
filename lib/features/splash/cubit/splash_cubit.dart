@@ -49,7 +49,7 @@ class SplashCubit extends Cubit<SplashStates> {
     await Future.delayed(const Duration(seconds: 2));
 
     final bool? hasToken = PreferencesHelper.hasToken();
-    final String? hasAppLanguage = PreferencesHelper.getAppLanguage();
+    final bool? hasAppLanguage = PreferencesHelper.hasLang();
 
     // if (!mounted) return;
 
@@ -58,7 +58,7 @@ class SplashCubit extends Cubit<SplashStates> {
         context,
         MaterialPageRoute(builder: (_) => HomeScreen()),
       );
-    } else if (hasAppLanguage == null) {
+    } else if (hasAppLanguage == null || hasAppLanguage == false) {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (_) => LanguageScreen()),
