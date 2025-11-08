@@ -1,4 +1,5 @@
 import 'package:donation_app/core/routing/app_routes_names.dart';
+import 'package:donation_app/features/payment_page_test.dart';
 import 'package:donation_app/features/payment_receipt.dart';
 import 'package:donation_app/features/splash/cubit/splash_cubit.dart';
 import 'package:donation_app/features/splash/presentation/screens/splash_screen.dart';
@@ -21,6 +22,10 @@ class AppRouter {
       case AppRoutesNames.paymentReceipt:
         {
           return MaterialPageRoute(builder: (_) => PaymentReceipt());
+        }
+      case AppRoutesNames.mockPaymentScreen:
+        {
+          return MaterialPageRoute(builder: (_) => MockPaymentScreen());
         }
       default:
         return null;

@@ -11,6 +11,12 @@ android {
     ndkVersion = "27.0.12077973"
 //    ndkVersion = flutter.ndkVersion
 
+//    sourceSets {
+//        getByName("main") {
+//            jniLibs.srcDirs("libs")
+//        }
+//    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -43,3 +49,10 @@ android {
 flutter {
     source = "../.."
 }
+
+dependencies {
+//    TODO: add Nearpay SDK dependency here when client provides it
+// Example:
+//    implementation(files("libs/nearpay-sdk.aar"))
+}
+

@@ -16,10 +16,19 @@ class LoginScreen extends StatelessWidget {
 
             ElevatedButton(
               onPressed: () async {
+                context.pushNamed(AppRoutesNames.mockPaymentScreen);
+              },
+              child: const Text('payment page'),
+            ),
+
+            ElevatedButton(
+              onPressed: () async {
                 context.pushNamed(AppRoutesNames.paymentReceipt);
               },
               child: const Text('payment receipt page'),
             ),
+
+
           ],
         ),
       ),
