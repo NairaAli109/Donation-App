@@ -1,7 +1,7 @@
 import 'package:donation_app/core/helpers/localization/app_localization.dart';
 import 'package:donation_app/core/helpers/localization/local_cubit.dart';
 import 'package:donation_app/core/helpers/prefrences_helper.dart';
-import 'package:donation_app/core/helpers/spacer.dart';
+import 'package:donation_app/core/widgets/spacer/horizontal_spacer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

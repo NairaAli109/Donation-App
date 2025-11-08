@@ -4,7 +4,7 @@ import 'package:device_info_plus/device_info_plus.dart';
 import 'package:donation_app/core/helpers/prefrences_helper.dart';
 import 'package:donation_app/features/home/presentation/screens/home_screen.dart';
 import 'package:donation_app/features/language/presentation/screens/language_screen.dart';
-import 'package:donation_app/features/login/presentation/screens/login_screen.dart';
+import 'package:donation_app/features/setup/presentation/screens/setup_screen.dart';
 import 'package:donation_app/features/splash/cubit/splash_states.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -66,7 +66,7 @@ class SplashCubit extends Cubit<SplashStates> {
     } else {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => LoginScreen()),
+        MaterialPageRoute(builder: (_) => SetupScreen()),
       );
     }
   }
