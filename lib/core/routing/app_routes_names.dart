@@ -6,6 +6,7 @@ class AppRoutesNames{
   static const String loaderScreen = "loaderScreen";
 
   static const String charityDonateNowScreen = "charityDonateNowScreen";
+  static const String layoutScreen = "layoutScreen";
 
 
   static const String paymentReceipt = "paymentReceipt";

@@ -1,9 +1,13 @@
+import 'package:donation_app/core/helpers/extensions.dart';
 import 'package:donation_app/core/helpers/prefrences_helper.dart';
+import 'package:donation_app/core/routing/app_routes_names.dart';
 import 'package:donation_app/core/theming/app_colors.dart';
 import 'package:donation_app/core/widgets/custom_assets_image.dart';
 import 'package:donation_app/core/widgets/custom_button.dart';
 import 'package:donation_app/core/widgets/custom_circle_avatar.dart';
+import 'package:donation_app/core/widgets/custom_svg_icon.dart';
 import 'package:donation_app/core/widgets/custom_text.dart';
+import 'package:donation_app/core/widgets/spacer/horizontal_spacer.dart';
 import 'package:donation_app/core/widgets/spacer/vertical_spacer.dart';
 import 'package:donation_app/generated/assets.dart';
 import 'package:flutter/material.dart';
@@ -41,11 +45,30 @@ class CharityDonateNowScreen extends StatelessWidget {
               fontSize: 20,
             ),
             VerticalSpace(height: 8),
-            CustomButton(
-              onTap: () async {
-                await PreferencesHelper.deleteSetup();
-              },
-              text: "حذف التفعيل",
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CustomSvgIcon(assetName: Assets.iconsCharityIcon),
+                HorizontalSpace(width: 4),
+                CustomText(
+                  text: "بمساهمتك اليوم، تصنع فرقًا في حياة الكثيرين",
+                  fontSize: 14,
+                  color: AppColors.grey,
+                ),
+              ],
+            ),
+            VerticalSpace(height: 32),
+            Padding(
+              padding: EdgeInsetsDirectional.symmetric(horizontal: 16),
+              child: CustomButton(
+                text: "تبرع الان",
+                fillColor: AppColors.primaryColorForCharities,
+                textColor: AppColors.backgroundColor,
+                radius: 16,
+                onTap: () {
+                  context.pushNamedAndRemoveAll(AppRoutesNames.layoutScreen);
+                },
+              ),
             ),
           ],
         ),
