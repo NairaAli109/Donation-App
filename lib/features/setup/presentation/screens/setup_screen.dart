@@ -1,5 +1,3 @@
-import 'package:donation_app/core/helpers/extensions.dart';
-import 'package:donation_app/core/routing/app_routes_names.dart';
 import 'package:donation_app/core/theming/app_colors.dart';
 import 'package:donation_app/core/widgets/custom_assets_image.dart';
 import 'package:donation_app/core/widgets/custom_text.dart';

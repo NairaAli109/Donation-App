@@ -1,5 +1,3 @@
-import 'package:donation_app/core/helpers/extensions.dart';
-import 'package:donation_app/core/helpers/prefrences_helper.dart';
 import 'package:donation_app/core/theming/app_colors.dart';
 import 'package:donation_app/core/widgets/custom_app_bar.dart';
 import 'package:donation_app/core/widgets/custom_text.dart';

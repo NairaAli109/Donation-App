@@ -1,5 +1,4 @@
 import 'package:donation_app/core/helpers/extensions.dart';
-import 'package:donation_app/core/helpers/prefrences_helper.dart';
 import 'package:donation_app/core/routing/app_routes_names.dart';
 import 'package:donation_app/core/theming/app_colors.dart';
 import 'package:donation_app/core/widgets/custom_assets_image.dart';
@@ -48,13 +47,13 @@ class CharityDonateNowScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CustomSvgIcon(assetName: Assets.iconsCharityIcon),
-                HorizontalSpace(width: 4),
                 CustomText(
                   text: "بمساهمتك اليوم، تصنع فرقًا في حياة الكثيرين",
                   fontSize: 14,
                   color: AppColors.grey,
                 ),
+                HorizontalSpace(width: 4),
+                CustomSvgIcon(assetName: Assets.iconsCharityIcon),
               ],
             ),
             VerticalSpace(height: 32),

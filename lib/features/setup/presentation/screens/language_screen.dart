@@ -1,19 +1,11 @@
-import 'package:donation_app/core/helpers/app_images.dart';
 import 'package:donation_app/core/helpers/extensions.dart';
-import 'package:donation_app/core/helpers/localization/app_localization.dart';
 import 'package:donation_app/core/helpers/localization/local_cubit.dart';
-import 'package:donation_app/core/helpers/prefrences_helper.dart';
 import 'package:donation_app/core/routing/app_routes_names.dart';
 import 'package:donation_app/core/theming/app_colors.dart';
-import 'package:donation_app/core/widgets/custom_assets_image.dart';
 import 'package:donation_app/core/widgets/custom_button.dart';
-import 'package:donation_app/core/widgets/custom_svg_icon.dart';
 import 'package:donation_app/core/widgets/custom_text.dart';
-import 'package:donation_app/core/widgets/spacer/horizontal_spacer.dart';
 import 'package:donation_app/core/widgets/spacer/vertical_spacer.dart';
 import 'package:donation_app/features/setup/presentation/widgets/language/lang_drop_down.dart';
-import 'package:donation_app/generated/assets.dart';
-import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

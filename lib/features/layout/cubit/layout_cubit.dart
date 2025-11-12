@@ -1,8 +1,9 @@
+import 'package:donation_app/core/dependency_injection/setup_git.dart';
 import 'package:donation_app/core/theming/app_colors.dart';
 import 'package:donation_app/core/widgets/custom_svg_icon.dart';
-import 'package:donation_app/core/widgets/custom_text.dart';
 import 'package:donation_app/features/cart/presentation/screens/cart_screen.dart';
 import 'package:donation_app/features/donate_now/presentation/donate_now.dart';
+import 'package:donation_app/features/home/cubit/home_cubit.dart';
 import 'package:donation_app/features/home/presentation/screens/home_screen.dart';
 import 'package:donation_app/features/layout/cubit/layout_states.dart';
 import 'package:donation_app/features/layout/presentation/widgets/cart_icon.dart';
@@ -10,8 +11,6 @@ import 'package:donation_app/generated/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
-
-import '../../../core/widgets/custom_circle_avatar.dart';
 
 class LayoutCubit extends Cubit<LayoutStates> {
   LayoutCubit() : super(LayoutInitialState());
@@ -49,7 +48,10 @@ class LayoutCubit extends Cubit<LayoutStates> {
 
   List<Widget> screens = [
     ///======= Home =======//
-    HomeScreen(),
+    BlocProvider(
+      create: (context) => getIt.get<HomeCubit>(),
+      child: HomeScreen(),
+    ),
 
     ///======= Cart =======///
     CartScreen(),
@@ -59,6 +61,7 @@ class LayoutCubit extends Cubit<LayoutStates> {
   ];
 
   int selectedIndex = 0;
+
   selectItem(int index, BuildContext context) {
     if (selectedIndex != index) {
       selectedIndex = index;

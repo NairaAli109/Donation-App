@@ -1,3 +1,8 @@
+import 'package:donation_app/core/widgets/spacer/vertical_spacer.dart';
+import 'package:donation_app/features/home/presentation/widgets/categories_list.dart';
+import 'package:donation_app/features/home/presentation/widgets/home_app_bar.dart';
+import 'package:donation_app/features/home/presentation/widgets/project/project_list_item.dart';
+import 'package:donation_app/features/home/presentation/widgets/project/projects_list.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -5,6 +10,24 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text("home")));
+    return Scaffold(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsetsDirectional.only(start: 15, top: 13),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                HomeAppBar(),
+                VerticalSpace(height: 40),
+                CategoriesList(),
+                VerticalSpace(height: 23),
+                ProjectsList(),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }

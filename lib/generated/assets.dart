@@ -7,6 +7,7 @@ class Assets {
   static const String almaraiAlmaraiLight = 'assets/fonts/Almarai/Almarai-Light.ttf';
   static const String almaraiAlmaraiRegular = 'assets/fonts/Almarai/Almarai-Regular.ttf';
   static const String almaraiOFL = 'assets/fonts/Almarai/OFL.txt';
+  static const String iconsAddToCartIcon = 'assets/icons/add_to_cart_icon.svg';
   static const String iconsArrowBackIcon = 'assets/icons/arrow_back_icon.svg';
   static const String iconsArrowDownIcon = 'assets/icons/arrow_down_icon.svg';
   static const String iconsCartIcon = 'assets/icons/cart_icon.svg';
@@ -16,10 +17,15 @@ class Assets {
   static const String iconsFailedDeviceCheck = 'assets/icons/failed_device_check.svg';
   static const String iconsGreyCircleIcon = 'assets/icons/grey_circle_icon.svg';
   static const String iconsHomeIcon = 'assets/icons/home_icon.svg';
+  static const String iconsKafarahIcon = 'assets/icons/kafarah_icon.svg';
   static const String iconsLangFlagImage = 'assets/icons/lang_flag_image.png';
+  static const String iconsOrphanIcon = 'assets/icons/orphan_icon.svg';
+  static const String iconsRialIcon = 'assets/icons/rial_icon.svg';
+  static const String iconsSadakaIcon = 'assets/icons/sadaka_icon.svg';
   static const String iconsSelectedDonateNowIson = 'assets/icons/selected_donate_now_ison.svg';
   static const String iconsSelectedHomeIcon = 'assets/icons/selected_home_icon.svg';
   static const String iconsSuccessDeviceCheck = 'assets/icons/success_device_check.svg';
+  static const String iconsZakahIcon = 'assets/icons/zakah_icon.svg';
   static const String imagesBedayaCharityLogo = 'assets/images/bedaya_charity_logo.png';
   static const String imagesCharityOnboardImage = 'assets/images/charity_onboard_image.jpg';
   static const String imagesFatoorahLogo = 'assets/images/Fatoorah_logo.png';

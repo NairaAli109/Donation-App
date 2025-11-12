@@ -1,5 +1,3 @@
-import 'package:donation_app/core/helpers/extensions.dart';
-import 'package:donation_app/core/routing/app_routes_names.dart';
 import 'package:donation_app/core/widgets/custom_app_bar.dart';
 import 'package:donation_app/core/widgets/custom_button.dart';
 import 'package:donation_app/features/setup/cubit/check_device_cubit/check_device_cubit.dart';
