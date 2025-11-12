@@ -1,11 +1,9 @@
-import 'package:donation_app/core/theming/app_colors.dart';
+import 'package:donation_app/core/helpers/extensions.dart';
+import 'package:donation_app/core/routing/app_routes_names.dart';
 import 'package:donation_app/core/widgets/custom_app_bar.dart';
 import 'package:donation_app/core/widgets/custom_button.dart';
-import 'package:donation_app/core/widgets/custom_svg_icon.dart';
-import 'package:donation_app/features/setup/cubit/check_device_cubit.dart';
-import 'package:donation_app/features/setup/cubit/check_device_states.dart';
-import 'package:donation_app/features/setup/presentation/widgets/check_device/device_checker_alert_diaog.dart';
-import 'package:donation_app/generated/assets.dart';
+import 'package:donation_app/features/setup/cubit/check_device_cubit/check_device_cubit.dart';
+import 'package:donation_app/features/setup/cubit/check_device_cubit/check_device_states.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

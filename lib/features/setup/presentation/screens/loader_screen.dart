@@ -1,9 +1,10 @@
 import 'package:donation_app/core/helpers/extensions.dart';
+import 'package:donation_app/core/helpers/prefrences_helper.dart';
 import 'package:donation_app/core/theming/app_colors.dart';
 import 'package:donation_app/core/widgets/custom_app_bar.dart';
 import 'package:donation_app/core/widgets/custom_text.dart';
 import 'package:donation_app/core/widgets/spacer/vertical_spacer.dart';
-import 'package:donation_app/features/setup/cubit/check_device_cubit.dart';
+import 'package:donation_app/features/setup/cubit/check_device_cubit/check_device_cubit.dart';
 import 'package:flutter/material.dart';
 
 class LoaderScreen extends StatefulWidget {
@@ -23,10 +24,11 @@ class _LoaderScreenState extends State<LoaderScreen> {
   Future<void> _navigateAfterDelay() async {
     await Future.delayed(const Duration(seconds: 5));
     if (mounted) {
-      context.pop();
+      // context.pop();
+      var cubit = CheckDeviceCubit.get(context);
+      cubit.successAlertDialog(context);
     }
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -43,8 +45,8 @@ class _LoaderScreenState extends State<LoaderScreen> {
                 height: 120,
                 child: CircularProgressIndicator(
                   strokeWidth: 9,
-                  color: AppColors.primaryColor,
-                  backgroundColor: AppColors.grey1,
+                  color: AppColors.primaryColorForFatoorah,
+                  backgroundColor: AppColors.grey,
                 ),
               ),
               VerticalSpace(height: 32),
@@ -52,7 +54,7 @@ class _LoaderScreenState extends State<LoaderScreen> {
                 text: 'جارٍ التحقق من كود التفعيل',
                 fontWeight: FontWeight.w700,
                 fontSize: 20,
-                color: AppColors.primaryColor,
+                color: AppColors.primaryColorForFatoorah,
                 textAlign: TextAlign.center,
               ),
               VerticalSpace(height: 16),

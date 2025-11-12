@@ -20,6 +20,13 @@ class CustomSvgIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SvgPicture.asset(fit: fit, assetName, width: width, height: height);
+    return SvgPicture.asset(
+      fit: fit,
+      assetName,
+      width: width,
+      height: height,
+      colorFilter:
+          color != null ? ColorFilter.mode(color!, BlendMode.srcIn) : null, //
+    );
   }
 }

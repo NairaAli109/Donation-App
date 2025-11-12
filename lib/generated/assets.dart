@@ -8,8 +8,14 @@ class Assets {
   static const String almaraiAlmaraiRegular = 'assets/fonts/Almarai/Almarai-Regular.ttf';
   static const String almaraiOFL = 'assets/fonts/Almarai/OFL.txt';
   static const String iconsArrowBackIcon = 'assets/icons/arrow_back_icon.svg';
+  static const String iconsArrowDownIcon = 'assets/icons/arrow_down_icon.svg';
+  static const String iconsCircularCheckIcon = 'assets/icons/circular_check_icon.svg';
   static const String iconsFailedDeviceCheck = 'assets/icons/failed_device_check.svg';
   static const String iconsGreyCircleIcon = 'assets/icons/grey_circle_icon.svg';
+  static const String iconsLangFlagImage = 'assets/icons/lang_flag_image.png';
   static const String iconsSuccessDeviceCheck = 'assets/icons/success_device_check.svg';
+  static const String imagesBedayaCharityLogo = 'assets/images/bedaya_charity_logo.png';
+  static const String imagesCharityOnboardImage = 'assets/images/charity_onboard_image.jpg';
+  static const String imagesFatoorahLogo = 'assets/images/Fatoorah_logo.png';
 
 }

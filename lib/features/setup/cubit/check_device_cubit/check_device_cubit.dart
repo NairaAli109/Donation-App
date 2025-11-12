@@ -1,6 +1,7 @@
 import 'package:donation_app/core/helpers/extensions.dart';
+import 'package:donation_app/core/helpers/prefrences_helper.dart';
 import 'package:donation_app/core/routing/app_routes_names.dart';
-import 'package:donation_app/features/setup/cubit/check_device_states.dart';
+import 'package:donation_app/features/setup/cubit/check_device_cubit/check_device_states.dart';
 import 'package:donation_app/features/setup/presentation/widgets/check_device/device_checker_alert_diaog.dart';
 import 'package:donation_app/generated/assets.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +28,10 @@ class CheckDeviceCubit extends Cubit<CheckDeviceStates> {
           buttonText: 'متابعة',
           hint: 'تبقى لك جهازان فقط من اشتراكك الحالي',
           isFailed: false,
-          onTap: () {},
+          onTap: () async {
+            await PreferencesHelper.saveSetup();
+            context.pushNamed(AppRoutesNames.charityDonateNowScreen);
+          },
           isDeviceLimitReached: false,
         );
       },
@@ -43,7 +47,7 @@ class CheckDeviceCubit extends Cubit<CheckDeviceStates> {
           dialogTitle: 'فشل التفعيل',
           dialogDescription:
               'الكود الذي تم إدخاله غير صحيح أو انتهت صلاحيته'
-                  ' يرجى التأكد من الكود أو التواصل مع فريق الدعم',
+              ' يرجى التأكد من الكود أو التواصل مع فريق الدعم',
           buttonText: 'أعد المحاولة',
           hint: 'تواصل مع الدعم',
           isFailed: true,

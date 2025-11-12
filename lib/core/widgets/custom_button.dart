@@ -43,9 +43,9 @@ class CustomButton extends StatelessWidget {
           width: width ?? double.infinity,
           padding: padding ?? const EdgeInsets.only(bottom: 1),
           decoration: BoxDecoration(
-            color: fillColor ?? AppColors.primaryColor,
-            borderRadius: BorderRadius.circular(radius ?? 12),
-            border: Border.all(color: borderColor ?? AppColors.primaryColor),
+            color: fillColor ?? AppColors.primaryColorForFatoorah,
+            borderRadius: BorderRadius.circular(radius ?? 8),
+            border: Border.all(color: borderColor ?? AppColors.primaryColorForFatoorah),
           ),
           child:
               prefixIcon == null

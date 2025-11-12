@@ -37,11 +37,17 @@ class PreferencesHelper {
     return _preferences?.getBool('hasLang');
   }
 
-  // static Future<void> saveAppLanguage({required String language}) async {
-  //   _preferences?.setString("selectedLanguage", language);
-  // }
-  //
-  // static String? getAppLanguage() {
-  //   return _preferences?.getString("selectedLanguage");
-  // }
+  ///fatoorah setup
+  static Future<void> saveSetup() async {
+    _preferences?.setBool("hasSetup", true);
+  }
+
+  static Future<void> deleteSetup() async {
+    _preferences?.setBool("hasSetup", false);
+  }
+
+  static bool? hasSetup() {
+    return _preferences?.getBool('hasSetup');
+  }
+
 }

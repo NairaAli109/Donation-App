@@ -24,4 +24,7 @@ class LocaleCubit extends Cubit<Locale> {
   void toEnglish() => setLocale(const Locale('en'));
 
   void toArabic() => setLocale(const Locale('ar'));
+
+  String? selectedLanguage;
+
 }
