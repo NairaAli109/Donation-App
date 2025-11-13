@@ -17,7 +17,7 @@
 
 
     <application
-        android:label="donation_app"
+        android:label="Fatoorah"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

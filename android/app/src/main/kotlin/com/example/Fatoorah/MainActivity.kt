@@ -1,4 +1,4 @@
-package com.example.donation_app
+package com.example.Fatoorah
 
 import io.flutter.embedding.android.FlutterActivity
 
