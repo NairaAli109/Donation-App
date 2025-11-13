@@ -86,6 +86,7 @@ dependencies:
   nearpay_flutter_sdk:
     git:
       url: https://github.com/nearpayio/nearpay-flutter-sdk.git
+      ref: v1-google
 
 
 dev_dependencies:
