@@ -88,6 +88,9 @@ dependencies:
       url: https://github.com/nearpayio/nearpay-flutter-sdk.git
       ref: v1-google
 
+  # bluetooth printing
+  flutter_bluetooth_printer: ^2.20.0
+
 
 dev_dependencies:
   change_app_package_name: ^1.5.0

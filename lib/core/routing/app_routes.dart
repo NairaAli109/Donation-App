@@ -36,7 +36,8 @@ class AppRouter {
           // } else {
           //   return MaterialPageRoute(builder: (_) => LanguageScreen());
           // }
-          return MaterialPageRoute(builder: (_) => MockPaymentScreen());
+          return MaterialPageRoute(builder: (_) => PaymentReceipt());
+          // return MaterialPageRoute(builder: (_) => MockPaymentScreen());
         }
 
       case AppRoutesNames.setupScreen:
