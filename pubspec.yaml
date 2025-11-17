@@ -71,16 +71,16 @@ dependencies:
   flutter_svg: ^2.0.9
 
   flutter_native_splash: ^2.4.4
-
   dropdown_button2: ^2.3.9
+  pinput: ^5.0.2
 
   persistent_bottom_nav_bar: ^6.2.1
 
   #payment receipt
-  esc_pos_printer_plus: ^0.1.1
-  esc_pos_utils_plus: ^2.0.3
-  pdf: ^3.11.3
-  printing: ^5.14.2
+#  esc_pos_printer_plus: ^0.1.1
+#  esc_pos_utils_plus: ^2.0.3
+#  pdf: ^3.11.3
+#  printing: ^5.14.2
 
   #nearpay payment
   nearpay_flutter_sdk:

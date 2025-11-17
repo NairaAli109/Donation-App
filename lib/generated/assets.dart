@@ -20,6 +20,7 @@ class Assets {
   static const String iconsKafarahIcon = 'assets/icons/kafarah_icon.svg';
   static const String iconsLangFlagImage = 'assets/icons/lang_flag_image.png';
   static const String iconsOrphanIcon = 'assets/icons/orphan_icon.svg';
+  static const String iconsOtpIcon = 'assets/icons/otp_icon.svg';
   static const String iconsRialIcon = 'assets/icons/rial_icon.svg';
   static const String iconsSadakaIcon = 'assets/icons/sadaka_icon.svg';
   static const String iconsSelectedDonateNowIson = 'assets/icons/selected_donate_now_ison.svg';

@@ -1,7 +1,14 @@
+import 'package:donation_app/core/theming/app_colors.dart';
 import 'package:donation_app/core/widgets/custom_app_bar.dart';
 import 'package:donation_app/core/widgets/custom_button.dart';
+import 'package:donation_app/core/widgets/custom_svg_icon.dart';
+import 'package:donation_app/core/widgets/custom_text.dart';
+import 'package:donation_app/core/widgets/spacer/vertical_spacer.dart';
 import 'package:donation_app/features/setup/cubit/check_device_cubit/check_device_cubit.dart';
 import 'package:donation_app/features/setup/cubit/check_device_cubit/check_device_states.dart';
+import 'package:donation_app/features/setup/presentation/widgets/check_device/otp.dart';
+import 'package:donation_app/features/setup/presentation/widgets/check_device/send_button.dart';
+import 'package:donation_app/generated/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -21,15 +28,23 @@ class CheckDeviceScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  BlocBuilder<CheckDeviceCubit, CheckDeviceStates>(
-                    builder: (context, state) {
-                      var cubit = CheckDeviceCubit.get(context);
-                      return CustomButton(
-                        onTap: () => cubit.checkDeviceAuth(context),
-                        text: "أرسال",
-                      );
-                    },
+                  CustomSvgIcon(assetName: Assets.iconsOtpIcon),
+                  VerticalSpace(height: 16),
+                  CustomText(
+                    text: "إدخال كود التفعيل",
+                    fontSize: 20,
+                    fontWeight: FontWeight.w700,
                   ),
+                  VerticalSpace(height: 16),
+                  CustomText(
+                    text: "أدخل كود التفعيل المطبوع على فاتورة الاشتراك",
+                    fontSize: 14,
+                    color: AppColors.grey,
+                  ),
+                  VerticalSpace(height: 36),
+                  Otp(),
+                  VerticalSpace(height: 56),
+                  SendButton()
                 ],
               ),
             ),

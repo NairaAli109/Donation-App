@@ -19,6 +19,7 @@ class AppColors {
   ///white
   static const mainWhite = Color(0xFFFFFFFF);
   static const mainBlack = Color(0xFF000000);
+  static const secondaryMainColor = Color(0xFFF6F8FE);
 
   static const primaryColorShade50 = Color(0xFFE7FFF7);
   static const primaryColorShade100 = Color(0xFFC6FFE6);

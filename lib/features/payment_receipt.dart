@@ -1,17 +1,9 @@
-import 'dart:io';
 import 'package:donation_app/core/theming/app_colors.dart';
-import 'package:donation_app/core/widgets/custom_app_bar.dart';
 import 'package:donation_app/core/widgets/custom_button.dart';
 import 'package:donation_app/core/widgets/custom_text.dart';
 import 'package:donation_app/core/widgets/spacer/vertical_spacer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bluetooth_printer/flutter_bluetooth_printer_library.dart';
-import 'package:pdf/widgets.dart' as pw;
-import 'package:pdf/pdf.dart';
-import 'package:printing/printing.dart';
-import 'package:esc_pos_printer_plus/esc_pos_printer_plus.dart';
-import 'package:esc_pos_utils_plus/esc_pos_utils_plus.dart';
-import 'package:path_provider/path_provider.dart';
 
 ///3
 class PaymentReceipt extends StatefulWidget {

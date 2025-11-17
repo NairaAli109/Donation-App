@@ -20,23 +20,23 @@ class AppRouter {
     switch (settings.name) {
       case AppRoutesNames.startScreen:
         {
-          // final bool? hasSetup = PreferencesHelper.hasSetup();
-          // final bool? hasLang = PreferencesHelper.hasLang();
-          //
-          // if (hasLang == true && hasSetup == true) {
-          //   return MaterialPageRoute(builder: (_) => CharityDonateNowScreen());
-          // } else if (hasLang == true && hasSetup != true) {
-          //   return MaterialPageRoute(
-          //     builder:
-          //         (_) => BlocProvider(
-          //           create: (context) => getIt.get<SetupCubit>(),
-          //           child: SetupScreen(),
-          //         ),
-          //   );
-          // } else {
-          //   return MaterialPageRoute(builder: (_) => LanguageScreen());
-          // }
-          return MaterialPageRoute(builder: (_) => PaymentReceipt());
+          final bool? hasSetup = PreferencesHelper.hasSetup();
+          final bool? hasLang = PreferencesHelper.hasLang();
+
+          if (hasLang == true && hasSetup == true) {
+            return MaterialPageRoute(builder: (_) => CharityDonateNowScreen());
+          } else if (hasLang == true && hasSetup != true) {
+            return MaterialPageRoute(
+              builder:
+                  (_) => BlocProvider(
+                    create: (context) => getIt.get<SetupCubit>(),
+                    child: SetupScreen(),
+                  ),
+            );
+          } else {
+            return MaterialPageRoute(builder: (_) => LanguageScreen());
+          }
+          // return MaterialPageRoute(builder: (_) => PaymentReceipt());
           // return MaterialPageRoute(builder: (_) => MockPaymentScreen());
         }
 
