@@ -1,7 +1,7 @@
 import 'package:donation_app/core/dependency_injection/setup_git.dart';
 import 'package:donation_app/core/helpers/prefrences_helper.dart';
 import 'package:donation_app/core/routing/app_routes_names.dart';
-import 'package:donation_app/features/charity_donate_now/presentation/screens/charity_donate_now_screen.dart';
+import 'package:donation_app/features/charity_onboard/presentation/screens/charity_onboard_screen.dart';
 import 'package:donation_app/features/layout/cubit/layout_cubit.dart';
 import 'package:donation_app/features/layout/presentation/screens/layout_screen.dart';
 import 'package:donation_app/features/payment_page_test.dart';
@@ -24,7 +24,7 @@ class AppRouter {
           final bool? hasLang = PreferencesHelper.hasLang();
 
           if (hasLang == true && hasSetup == true) {
-            return MaterialPageRoute(builder: (_) => CharityDonateNowScreen());
+            return MaterialPageRoute(builder: (_) => CharityOnBoardScreen());
           } else if (hasLang == true && hasSetup != true) {
             return MaterialPageRoute(
               builder:
@@ -75,7 +75,7 @@ class AppRouter {
 
       case AppRoutesNames.charityDonateNowScreen:
         {
-          return MaterialPageRoute(builder: (_) => CharityDonateNowScreen());
+          return MaterialPageRoute(builder: (_) => CharityOnBoardScreen());
         }
 
       case AppRoutesNames.layoutScreen:
