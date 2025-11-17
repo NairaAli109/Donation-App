@@ -11,27 +11,29 @@ import 'package:donation_app/core/widgets/spacer/vertical_spacer.dart';
 import 'package:donation_app/generated/assets.dart';
 import 'package:flutter/material.dart';
 
-class CharityDonateNowScreen extends StatelessWidget {
-  const CharityDonateNowScreen({super.key});
+class CharityDetails extends StatelessWidget {
+  const CharityDetails({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
+    return Positioned(
+      top: 490,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      child: Container(
+        width: double.infinity,
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 48),
+        decoration: const BoxDecoration(
+          color: AppColors.backgroundColor,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(24),
+            topRight: Radius.circular(24),
+          ),
+        ),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
-            ClipRRect(
-              borderRadius: const BorderRadius.only(
-                bottomRight: Radius.circular(240),
-              ),
-              child: CustomAssetsImage(
-                assetName: Assets.imagesCharityOnboardImage,
-                fit: BoxFit.cover,
-                height: 430,
-                width: double.infinity,
-              ),
-            ),
-            VerticalSpace(height: 59.55),
             CustomCircleAvatar(
               child: CustomAssetsImage(
                 assetName: Assets.imagesBedayaCharityLogo,
@@ -47,10 +49,12 @@ class CharityDonateNowScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CustomText(
-                  text: "بمساهمتك اليوم، تصنع فرقًا في حياة الكثيرين",
-                  fontSize: 14,
-                  color: AppColors.grey,
+                Flexible(
+                  child: CustomText(
+                    text: "بمساهمتك اليوم، تصنع فرقًا في حياة الكثيرين",
+                    fontSize: 14,
+                    color: AppColors.grey,
+                  ),
                 ),
                 HorizontalSpace(width: 4),
                 CustomSvgIcon(assetName: Assets.iconsCharityIcon),
@@ -64,9 +68,10 @@ class CharityDonateNowScreen extends StatelessWidget {
                 fillColor: AppColors.primaryColorForCharities,
                 textColor: AppColors.backgroundColor,
                 radius: 16,
-                onTap: () {
-                  context.pushNamedAndRemoveAll(AppRoutesNames.layoutScreen);
-                },
+                onTap:
+                    () => context.pushNamedAndRemoveAll(
+                      AppRoutesNames.layoutScreen,
+                    ),
               ),
             ),
           ],

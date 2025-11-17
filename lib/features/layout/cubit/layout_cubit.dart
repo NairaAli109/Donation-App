@@ -2,7 +2,8 @@ import 'package:donation_app/core/dependency_injection/setup_git.dart';
 import 'package:donation_app/core/theming/app_colors.dart';
 import 'package:donation_app/core/widgets/custom_svg_icon.dart';
 import 'package:donation_app/features/cart/presentation/screens/cart_screen.dart';
-import 'package:donation_app/features/donate_now/presentation/donate_now.dart';
+import 'package:donation_app/features/donate_now/cubit/donate_now_cubit.dart';
+import 'package:donation_app/features/donate_now/presentation/screens/donate_now_screen.dart';
 import 'package:donation_app/features/home/cubit/home_cubit.dart';
 import 'package:donation_app/features/home/presentation/screens/home_screen.dart';
 import 'package:donation_app/features/layout/cubit/layout_states.dart';
@@ -47,17 +48,21 @@ class LayoutCubit extends Cubit<LayoutStates> {
   }
 
   List<Widget> screens = [
+
     ///======= Home =======//
     BlocProvider(
       create: (context) => getIt.get<HomeCubit>(),
       child: HomeScreen(),
     ),
 
+    ///======= Donate now =======///
+    BlocProvider(
+      create: (context) =>  getIt.get<DonateNowCubit>(),
+      child: DonateNow(),
+    ),
+
     ///======= Cart =======///
     CartScreen(),
-
-    ///======= Donate now =======///
-    DonateNow(),
   ];
 
   int selectedIndex = 0;

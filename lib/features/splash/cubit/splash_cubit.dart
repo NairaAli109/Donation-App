@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:donation_app/core/dependency_injection/setup_git.dart';
 import 'package:donation_app/core/helpers/prefrences_helper.dart';
-import 'package:donation_app/features/charity_donate_now/presentation/screens/charity_donate_now_screen.dart';
+import 'package:donation_app/features/charity_onboard/presentation/screens/charity_onboard_screen.dart';
 import 'package:donation_app/features/setup/cubit/setup_cubit/setup_cubit.dart';
 import 'package:donation_app/features/setup/presentation/screens/setup_screen.dart';
 import 'package:donation_app/features/splash/cubit/splash_states.dart';
@@ -59,7 +59,7 @@ class SplashCubit extends Cubit<SplashStates> {
     if (hasSetup == true) {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => CharityDonateNowScreen()),
+        MaterialPageRoute(builder: (_) => CharityOnBoardScreen()),
       );
     } else {
       Navigator.pushReplacement(

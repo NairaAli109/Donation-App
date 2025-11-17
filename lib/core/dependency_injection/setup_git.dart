@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:donation_app/core/helpers/localization/local_cubit.dart';
 import 'package:donation_app/core/networking/dio_factory.dart';
+import 'package:donation_app/features/donate_now/cubit/donate_now_cubit.dart';
 import 'package:donation_app/features/home/cubit/home_cubit.dart';
 import 'package:donation_app/features/layout/cubit/layout_cubit.dart';
 import 'package:donation_app/features/setup/cubit/check_device_cubit/check_device_cubit.dart';
@@ -20,6 +21,7 @@ void setupLocator() {
 
   getIt.registerFactory<LayoutCubit>(() => LayoutCubit());
   getIt.registerFactory<HomeCubit>(() => HomeCubit());
+  getIt.registerFactory<DonateNowCubit>(() => DonateNowCubit());
 
   getIt.registerFactory<SplashCubit>(() => SplashCubit());
 
