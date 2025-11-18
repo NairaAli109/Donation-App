@@ -2,9 +2,11 @@ import 'package:dio/dio.dart';
 import 'package:donation_app/core/helpers/localization/local_cubit.dart';
 import 'package:donation_app/core/networking/dio_factory.dart';
 import 'package:donation_app/features/cart/cubit/cart_cubit.dart';
+import 'package:donation_app/features/charity_onboard/cubit/charity_onboard_cubit.dart';
 import 'package:donation_app/features/donate_now/cubit/donate_now_cubit.dart';
 import 'package:donation_app/features/home/cubit/home_cubit.dart';
 import 'package:donation_app/features/layout/cubit/layout_cubit.dart';
+import 'package:donation_app/features/project_details/cubit/project_details_cubit.dart';
 import 'package:donation_app/features/setup/cubit/check_device_cubit/check_device_cubit.dart';
 import 'package:donation_app/features/setup/cubit/setup_cubit/setup_cubit.dart';
 import 'package:donation_app/features/splash/cubit/splash_cubit.dart';
@@ -20,8 +22,10 @@ void setupLocator() {
   getIt.registerFactory<SetupCubit>(() => SetupCubit());
   getIt.registerFactory<CheckDeviceCubit>(() => CheckDeviceCubit());
 
+  getIt.registerFactory<CharityOnboardCubit>(() => CharityOnboardCubit());
   getIt.registerFactory<LayoutCubit>(() => LayoutCubit());
   getIt.registerFactory<HomeCubit>(() => HomeCubit());
+  getIt.registerFactory<ProjectDetailsCubit>(() => ProjectDetailsCubit());
   getIt.registerFactory<DonateNowCubit>(() => DonateNowCubit());
   getIt.registerFactory<CartCubit>(() => CartCubit());
 

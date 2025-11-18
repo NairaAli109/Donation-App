@@ -1,11 +1,19 @@
-import 'package:donation_app/features/donate_now/cubit/donate_now_states.dart';
+import 'package:donation_app/features/project_details/cubit/project_details_states.dart';
+import 'package:donation_app/generated/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class DonateNowCubit extends Cubit<DonateNowStates> {
-  DonateNowCubit() : super(DonateNowInitialState());
+class ProjectDetailsCubit extends Cubit<ProjectDetailsStates> {
+  ProjectDetailsCubit() : super(ProjectDetailsInitialState());
 
-  static DonateNowCubit get(BuildContext context) => BlocProvider.of(context);
+  static ProjectDetailsCubit get(BuildContext context) =>
+      BlocProvider.of(context);
+
+  final List<String> sliderImages = [
+    Assets.imagesCharityOnboardImage,
+    Assets.imagesCharityOnboardImage,
+    Assets.imagesCharityOnboardImage,
+  ];
 
   double? selectedAmount;
   bool isSelectedAmount = false;
@@ -26,7 +34,6 @@ class DonateNowCubit extends Cubit<DonateNowStates> {
   final formKey = GlobalKey<FormState>();
   final TextEditingController controller = TextEditingController();
 
-
   donationAmountValidation() {
     if (formKey.currentState!.validate() || selectedAmount != null) {
       donate();
@@ -34,4 +41,5 @@ class DonateNowCubit extends Cubit<DonateNowStates> {
   }
 
   donate() {}
+
 }

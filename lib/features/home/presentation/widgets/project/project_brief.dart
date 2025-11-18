@@ -1,12 +1,11 @@
 import 'package:donation_app/core/theming/app_colors.dart';
 import 'package:donation_app/core/widgets/custom_text.dart';
 import 'package:donation_app/core/widgets/spacer/vertical_spacer.dart';
-import 'package:donation_app/features/home/presentation/widgets/project/add_to_cart_button.dart';
 import 'package:donation_app/features/home/presentation/widgets/project/no_of_days_and_no_of_donor.dart';
 import 'package:donation_app/features/home/presentation/widgets/project/price.dart';
 import 'package:donation_app/features/home/presentation/widgets/project/price_progress_bar.dart';
 import 'package:donation_app/features/home/presentation/widgets/project/project_buttons.dart';
-import 'package:donation_app/features/home/presentation/widgets/project/project_details_button.dart';
+import 'package:donation_app/features/project_details/presentation/widgets/title_text.dart';
 import 'package:flutter/material.dart';
 
 class ProjectBrief extends StatelessWidget {
@@ -24,11 +23,7 @@ class ProjectBrief extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CustomText(
-            text: "كفالة يتم",
-            fontSize: 14,
-            fontWeight: FontWeight.w700,
-          ),
+          TitleText(text: 'كفالة يتم'),
           VerticalSpace(height: 8),
           CustomText(
             text: "أكفل يتيم ووفر له الرعاية الصحية والاجتماعية والصحية.",
@@ -40,8 +35,6 @@ class ProjectBrief extends StatelessWidget {
           PriceProgressBar(value: 0.3),
           VerticalSpace(height: 8),
           NoOfDaysAndNoOfDonor(),
-          VerticalSpace(height: 16),
-          ProjectButtons(),
         ],
       ),
     );

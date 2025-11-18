@@ -1,5 +1,5 @@
 import 'package:donation_app/features/charity_onboard/presentation/widgets/charity_details.dart';
-import 'package:donation_app/features/charity_onboard/presentation/widgets/charity_slider.dart';
+import 'package:donation_app/features/charity_onboard/presentation/widgets/chrity_slider.dart';
 import 'package:flutter/material.dart';
 
 class CharityOnBoardScreen extends StatefulWidget {

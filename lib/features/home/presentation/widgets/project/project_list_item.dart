@@ -1,5 +1,7 @@
 import 'package:donation_app/core/theming/app_colors.dart';
+import 'package:donation_app/core/widgets/spacer/vertical_spacer.dart';
 import 'package:donation_app/features/home/presentation/widgets/project/project_brief.dart';
+import 'package:donation_app/features/home/presentation/widgets/project/project_buttons.dart';
 import 'package:donation_app/features/home/presentation/widgets/project/project_image.dart';
 import 'package:flutter/material.dart';
 
@@ -22,6 +24,7 @@ class ProjectListItem extends StatelessWidget {
           children: [
             ProjectImage(),
             ProjectBrief(),
+            ProjectButtons(),
           ],
         ),
       ),

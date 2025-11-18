@@ -8,12 +8,15 @@ class ProjectButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        AddToCartButton(),
-        HorizontalSpace(width: 16),
-        ProjectDetailsButton(),
-      ],
+    return Padding(
+      padding: EdgeInsetsDirectional.only(start: 8, end: 8, bottom: 16),
+      child: Row(
+        children: [
+          AddToCartButton(onTap: () {}),
+          HorizontalSpace(width: 16),
+          ProjectDetailsButton(),
+        ],
+      ),
     );
   }
 }

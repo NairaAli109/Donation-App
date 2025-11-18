@@ -8,14 +8,17 @@ class AppColors {
   static const primaryColorForCharities = Color(0xFF077734);
 
   ///grey
-  static const grey = Color(0xFF4A5F6B);
   static const lightGrey = Color(0xFF748792);
+  static const darkGrey = Color(0xFF232933);
+
+  static const grey = Color(0xFF4A5F6B);
   static const grey1 = Color(0xFF828080);
   static const grey2 = Color(0xFFE5E5E5);
   static const grey3 = Color(0xFFE3E2E2);
   static const grey4 = Color(0xFFD7D7D8);
   static const grey5 = Color(0xFFF4F5F7);
   static const grey6 = Color(0xFFEFF6F2);
+  static const grey7 = Color(0xFFFAFAFA);
 
   ///white
   static const mainWhite = Color(0xFFFFFFFF);

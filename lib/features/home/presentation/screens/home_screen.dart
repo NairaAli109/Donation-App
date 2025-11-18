@@ -1,7 +1,6 @@
 import 'package:donation_app/core/widgets/spacer/vertical_spacer.dart';
 import 'package:donation_app/features/home/presentation/widgets/categories_list.dart';
 import 'package:donation_app/features/home/presentation/widgets/home_app_bar.dart';
-import 'package:donation_app/features/home/presentation/widgets/project/project_list_item.dart';
 import 'package:donation_app/features/home/presentation/widgets/project/projects_list.dart';
 import 'package:flutter/material.dart';
 
