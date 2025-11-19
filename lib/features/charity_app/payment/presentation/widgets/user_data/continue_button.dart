@@ -1,8 +1,8 @@
 import 'package:donation_app/core/theming/app_colors.dart';
 import 'package:donation_app/core/widgets/custom_button.dart';
 import 'package:donation_app/core/widgets/custom_text.dart';
-import 'package:donation_app/features/charity_app/payment/cubit/payment/payment_cubit.dart';
-import 'package:donation_app/features/charity_app/payment/cubit/payment/payment_states.dart';
+import 'package:donation_app/features/charity_app/payment/cubit/user_data/user_data_cubit.dart';
+import 'package:donation_app/features/charity_app/payment/cubit/user_data/user_data_states.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -11,9 +11,9 @@ class ContinueButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<PaymentCubit, PaymentStates>(
+    return BlocBuilder<UserDataCubit, UserDataStates>(
       builder: (context, state) {
-        var cubit = PaymentCubit.get(context);
+        var cubit = UserDataCubit.get(context);
         return Container(
           height: 100,
           width: double.infinity,

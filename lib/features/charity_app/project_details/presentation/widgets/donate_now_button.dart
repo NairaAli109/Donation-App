@@ -2,7 +2,7 @@ import 'package:donation_app/core/dependency_injection/setup_git.dart';
 import 'package:donation_app/core/theming/app_colors.dart';
 import 'package:donation_app/core/widgets/custom_button.dart';
 import 'package:donation_app/core/widgets/custom_text.dart';
-import 'package:donation_app/features/charity_app/payment/cubit/payment/payment_cubit.dart';
+import 'package:donation_app/features/charity_app/payment/cubit/user_data/user_data_cubit.dart';
 import 'package:donation_app/features/charity_app/payment/presentation/screens/user_data_screen.dart';
 import 'package:donation_app/features/charity_app/project_details/cubit/project_details_cubit.dart';
 import 'package:donation_app/features/charity_app/project_details/cubit/project_details_states.dart';
@@ -26,7 +26,7 @@ class DonateNowButton extends StatelessWidget {
                 PersistentNavBarNavigator.pushNewScreen(
                   context,
                   screen: BlocProvider(
-                    create: (context) => getIt.get<PaymentCubit>(),
+                    create: (context) => getIt.get<UserDataCubit>(),
                     child: UserDataScreen(),
                   ),
                   withNavBar: false,

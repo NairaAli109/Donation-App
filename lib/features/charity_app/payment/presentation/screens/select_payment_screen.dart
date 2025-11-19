@@ -2,8 +2,8 @@ import 'package:donation_app/core/theming/app_colors.dart';
 import 'package:donation_app/core/widgets/custom_app_bar.dart';
 import 'package:donation_app/core/widgets/custom_text.dart';
 import 'package:donation_app/core/widgets/spacer/vertical_spacer.dart';
-import 'package:donation_app/features/charity_app/payment/cubit/payment/payment_cubit.dart';
-import 'package:donation_app/features/charity_app/payment/cubit/payment/payment_states.dart';
+import 'package:donation_app/features/charity_app/payment/cubit/select_payment/select_payment_cubit.dart';
+import 'package:donation_app/features/charity_app/payment/cubit/select_payment/select_payment_states.dart';
 import 'package:donation_app/features/charity_app/payment/presentation/widgets/select_payment/payment_option.dart';
 import 'package:donation_app/generated/assets.dart';
 import 'package:flutter/material.dart';
@@ -26,9 +26,9 @@ class SelectPaymentScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsetsDirectional.only(top: 48, start: 16, end: 16),
-          child: BlocBuilder<PaymentCubit, PaymentStates>(
+          child: BlocBuilder<SelectPaymentCubit, SelectPaymentStates>(
             builder: (context, state) {
-              var cubit = PaymentCubit.get(context);
+              var cubit = SelectPaymentCubit.get(context);
 
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

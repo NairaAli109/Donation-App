@@ -1,6 +1,6 @@
 import 'package:donation_app/core/helpers/app_strings.dart';
 import 'package:donation_app/core/theming/app_colors.dart';
-import 'package:donation_app/features/charity_app/payment/cubit/payment/payment_cubit.dart';
+import 'package:donation_app/features/charity_app/payment/cubit/user_data/user_data_cubit.dart';
 import 'package:donation_app/features/charity_app/payment/presentation/widgets/user_data/custom_input_widget_package/custom_input_widget_package.dart';
 import 'package:donation_app/features/charity_app/payment/presentation/widgets/user_data/custom_input_widget_package/custom_selector_config.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +10,7 @@ class CustomPhoneField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cubit = PaymentCubit.get(context);
+    final cubit = UserDataCubit.get(context);
 
     return  CustomInternationalPhoneNumberInput(
       key: cubit.phoneFieldKey,
