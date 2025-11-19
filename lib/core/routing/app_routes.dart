@@ -1,13 +1,12 @@
 import 'package:donation_app/core/dependency_injection/setup_git.dart';
 import 'package:donation_app/core/helpers/prefrences_helper.dart';
 import 'package:donation_app/core/routing/app_routes_names.dart';
-import 'package:donation_app/features/charity_onboard/cubit/charity_onboard_cubit.dart';
-import 'package:donation_app/features/charity_onboard/presentation/screens/charity_onboard_screen.dart';
-import 'package:donation_app/features/layout/cubit/layout_cubit.dart';
-import 'package:donation_app/features/layout/presentation/screens/layout_screen.dart';
+import 'package:donation_app/features/charity_app/charity_onboard/cubit/charity_onboard_cubit.dart';
+import 'package:donation_app/features/charity_app/charity_onboard/presentation/screens/charity_onboard_screen.dart';
+import 'package:donation_app/features/charity_app/layout/cubit/layout_cubit.dart';
+import 'package:donation_app/features/charity_app/layout/presentation/screens/layout_screen.dart';
 import 'package:donation_app/features/payment_page_test.dart';
 import 'package:donation_app/features/payment_receipt.dart';
-import 'package:donation_app/features/project_details/presentation/screens/project_details_screen.dart';
 import 'package:donation_app/features/setup/cubit/check_device_cubit/check_device_cubit.dart';
 import 'package:donation_app/features/setup/cubit/setup_cubit/setup_cubit.dart';
 import 'package:donation_app/features/setup/presentation/screens/check_device_screen.dart';

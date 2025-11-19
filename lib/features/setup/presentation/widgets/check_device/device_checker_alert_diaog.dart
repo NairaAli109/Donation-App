@@ -36,7 +36,7 @@ class DeviceCheckerAlertDialog extends StatelessWidget {
         // height: 440,
         child: Padding(
           padding: const EdgeInsetsDirectional.symmetric(
-            horizontal: 24,
+            horizontal: 26,
             vertical: 28,
           ),
           child: Column(

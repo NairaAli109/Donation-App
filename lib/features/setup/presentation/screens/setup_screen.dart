@@ -16,7 +16,7 @@ class SetupScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsetsDirectional.only(start: 23.5, end: 23.5),
+        padding: EdgeInsetsDirectional.only(start: 23.5, end: 23.5, ),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

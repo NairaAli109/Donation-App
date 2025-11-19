@@ -67,7 +67,7 @@ class _CustomSliderWithDotsState extends State<CustomSliderWithDots> {
             ),
 
             Positioned(
-              bottom: 70,
+              bottom: 30,
               left: 0,
               right: 0,
               child: Center(

@@ -44,7 +44,7 @@ class _LoaderScreenState extends State<LoaderScreen> {
                 child: CircularProgressIndicator(
                   strokeWidth: 9,
                   color: AppColors.primaryColorForFatoorah,
-                  backgroundColor: AppColors.grey,
+                  backgroundColor: AppColors.grey2,
                 ),
               ),
               VerticalSpace(height: 32),

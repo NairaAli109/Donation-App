@@ -22,29 +22,31 @@ class CheckDeviceScreen extends StatelessWidget {
         return Scaffold(
           appBar: CustomAppBar(),
           body: Padding(
-            padding: EdgeInsetsDirectional.only(start: 23.5, end: 23.5),
+            padding: EdgeInsetsDirectional.only(start: 23.5, end: 23.5,),
             child: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  CustomSvgIcon(assetName: Assets.iconsOtpIcon),
-                  VerticalSpace(height: 16),
-                  CustomText(
-                    text: "إدخال كود التفعيل",
-                    fontSize: 20,
-                    fontWeight: FontWeight.w700,
-                  ),
-                  VerticalSpace(height: 16),
-                  CustomText(
-                    text: "أدخل كود التفعيل المطبوع على فاتورة الاشتراك",
-                    fontSize: 14,
-                    color: AppColors.grey,
-                  ),
-                  VerticalSpace(height: 36),
-                  Otp(),
-                  VerticalSpace(height: 56),
-                  SendButton()
-                ],
+              child: SingleChildScrollView(
+                child:Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CustomSvgIcon(assetName: Assets.iconsOtpIcon),
+                    VerticalSpace(height: 16),
+                    CustomText(
+                      text: "إدخال كود التفعيل",
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                    ),
+                    VerticalSpace(height: 16),
+                    CustomText(
+                      text: "أدخل كود التفعيل المطبوع على فاتورة الاشتراك",
+                      fontSize: 14,
+                      color: AppColors.grey,
+                    ),
+                    VerticalSpace(height: 36),
+                    Otp(),
+                    VerticalSpace(height: 56),
+                    SendButton()
+                  ],
+                ),
               ),
             ),
           ),

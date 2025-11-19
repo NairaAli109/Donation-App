@@ -72,44 +72,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
               ),
             ],
           ),
-          // child: Row(
-          //   mainAxisAlignment: MainAxisAlignment.center,
-          //   children: [
-          //     GestureDetector(
-          //       onTap: () {
-          //         var cubit = context.read<LocaleCubit>();
-          //         setState(() {
-          //           cubit.toArabic();
-          //           PreferencesHelper.saveLang(lang: "arabic");
-          //           print("arabic");
-          //         });
-          //       },
-          //       child: Container(
-          //         width: 50,
-          //         height: 50,
-          //         color: Colors.redAccent,
-          //         child: Text(AppLocalizations.of(context).arabic_lang),
-          //       ),
-          //     ),
-          //     HorizontalSpace(width: 8),
-          //     GestureDetector(
-          //       onTap: () {
-          //         var cubit = context.read<LocaleCubit>();
-          //         setState(() {
-          //           cubit.toEnglish();
-          //           PreferencesHelper.saveLang(lang: "english");
-          //           print("english");
-          //         });
-          //       },
-          //       child: Container(
-          //         width: 50,
-          //         height: 50,
-          //         color: Colors.redAccent,
-          //         child: Text(AppLocalizations.of(context).english_lang),
-          //       ),
-          //     ),
-          //   ],
-          // ),
+
         ),
       ),
     );
