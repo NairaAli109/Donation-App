@@ -8,6 +8,8 @@ class CustomArrowBackIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isArabic = Localizations.localeOf(context).languageCode == 'ar';
+
     return InkWell(
       onTap: () => context.pop(),
       splashColor: Colors.transparent,
@@ -15,7 +17,12 @@ class CustomArrowBackIcon extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           CustomSvgIcon(assetName: Assets.iconsGreyCircleIcon),
-          CustomSvgIcon(assetName: Assets.iconsArrowBackIcon),
+          CustomSvgIcon(
+            assetName:
+                isArabic
+                    ? Assets.iconsArrowBackRightIcon
+                    : Assets.iconsArrowBackIcon,
+          ),
         ],
       ),
     );

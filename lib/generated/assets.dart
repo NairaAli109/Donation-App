@@ -10,6 +10,7 @@ class Assets {
   static const String assetsIconsArrowDownIcon = 'assets/icons/arrow_down_icon.svg';
   static const String iconsAddToCartIcon = 'assets/icons/add_to_cart_icon.svg';
   static const String iconsArrowBackIcon = 'assets/icons/arrow_back_icon.svg';
+  static const String iconsArrowBackRightIcon = 'assets/icons/arrow_back_right_icon.svg';
   static const String iconsArrowDownIcon = 'assets/icons/arrowDownIcon.svg';
   static const String iconsCardPaymentIcon = 'assets/icons/card_payment_icon.svg';
   static const String iconsCartIcon = 'assets/icons/cart_icon.svg';
@@ -37,7 +38,6 @@ class Assets {
   static const String iconsVisaCardIcon = 'assets/icons/visa_card_icon.svg';
   static const String iconsZakahIcon = 'assets/icons/zakah_icon.svg';
   static const String imagesBedayaCharityLogo = 'assets/images/bedaya_charity_logo.png';
-  static const String imagesCharityBanner = 'assets/images/charity_banner.png';
   static const String imagesCharityOnboardImage = 'assets/images/charity_onboard_image.jpg';
   static const String imagesFatoorahLogo = 'assets/images/Fatoorah_logo.png';
   static const String imagesSuccessTransactionImage = 'assets/images/success_transaction_image.png';

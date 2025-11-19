@@ -12,7 +12,7 @@ class CustomPhoneField extends StatelessWidget {
   Widget build(BuildContext context) {
     final cubit = UserDataCubit.get(context);
 
-    return  CustomInternationalPhoneNumberInput(
+    return CustomInternationalPhoneNumberInput(
       key: cubit.phoneFieldKey,
       textFieldController: cubit.phoneController,
 
@@ -25,8 +25,17 @@ class CustomPhoneField extends StatelessWidget {
       ),
 
       validator: (value) {
-        if (cubit.phoneController.text.trim().isEmpty) {
-          return "يجب ادخال رقم الهاتف";
+        if (value == null || value.isEmpty) {
+          return "يرجى إدخال رقم الهاتف";
+        }
+        if (cubit.selectedCountry == "+966" && value.length < 9) {
+          return "رقم الهاتف السعودي يجب أن يكون 9 أرقام";
+        }
+        if (cubit.selectedCountry == "+968" && value.length < 8) {
+          return "رقم الهاتف العماني يجب أن يكون 8 أرقام";
+        }
+        if (cubit.selectedCountry == "+20" && value.length < 11) {
+          return "رقم الهاتف المصري يجب أن يكون 11 رقمًا";
         }
         return null;
       },
@@ -57,9 +66,9 @@ class CustomPhoneField extends StatelessWidget {
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(6),
           borderSide: const BorderSide(
-          color: AppColors.primaryColorForCharities,
-          width: 1,
-        ),
+            color: AppColors.primaryColorForCharities,
+            width: 1,
+          ),
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(6),
@@ -77,7 +86,7 @@ class CustomPhoneField extends StatelessWidget {
         trailingSpace: false,
         leadingPadding: 12,
         showFlags: true,
-        setSelectorButtonAsPrefixIcon: true
+        setSelectorButtonAsPrefixIcon: true,
       ),
       selectorTextStyle: const TextStyle(
         color: Colors.transparent,
