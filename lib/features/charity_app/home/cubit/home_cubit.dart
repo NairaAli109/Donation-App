@@ -8,13 +8,8 @@ class HomeCubit extends Cubit<HomeStates> {
 
   static HomeCubit get(BuildContext context) => BlocProvider.of(context);
 
-  List<String> categoriesName=[
-    "صدقة",
-    "زكاة",
-    "الايتام",
-    "كفارة",
-  ];
-  List<String> categoriesIcons=[
+  List<String> categoriesName = ["صدقة", "زكاة", "الايتام", "كفارة"];
+  List<String> categoriesIcons = [
     Assets.iconsSadakaIcon,
     Assets.iconsZakahIcon,
     Assets.iconsOrphanIcon,
@@ -28,10 +23,9 @@ class HomeCubit extends Cubit<HomeStates> {
     emit(ChangeSelectedCategoryState());
   }
 
-  final List<String> sliderImages = [
-    Assets.imagesCharityBanner,
-    Assets.imagesCharityBanner,
-    Assets.imagesCharityBanner,
+  final List<String> sliderItems = [
+    "أكفل يتيم ووفر له الرعاية \nالصحية والاجتماعية والصحية.",
+    "أكفل يتيم ووفر له الرعاية \nالصحية والاجتماعية والصحية.",
+    "أكفل يتيم ووفر له الرعاية \nالصحية والاجتماعية والصحية.",
   ];
-
 }

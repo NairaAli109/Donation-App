@@ -1,7 +1,6 @@
 import 'package:donation_app/features/charity_app/payment/presentation/widgets/user_data/custom_input_widget_package/custom_selector_config.dart';
 import 'package:flutter/material.dart';
 import 'package:intl_phone_number_input/src/models/country_model.dart';
-import 'package:intl_phone_number_input/src/utils/selector_config.dart';
 import 'package:intl_phone_number_input/src/utils/test/test_helper.dart';
 import 'package:intl_phone_number_input/src/widgets/countries_search_list_widget.dart';
 import 'package:intl_phone_number_input/src/widgets/input_widget.dart';

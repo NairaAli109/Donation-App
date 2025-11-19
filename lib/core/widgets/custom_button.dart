@@ -17,6 +17,7 @@ class CustomButton extends StatelessWidget {
     this.radius,
     this.textStyle,
     this.padding,
+    this.alignment,
   });
 
   final Function? onTap;
@@ -29,6 +30,7 @@ class CustomButton extends StatelessWidget {
   final double? width, radius;
   final TextStyle? textStyle;
   final EdgeInsetsGeometry? padding;
+  final AlignmentGeometry? alignment;
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +39,7 @@ class CustomButton extends StatelessWidget {
         onTap!();
       },
       child: Align(
-        alignment: Alignment.center,
+        alignment: alignment ?? Alignment.center,
         child: Container(
           height: height ?? 52,
           width: width ?? double.infinity,
@@ -45,7 +47,9 @@ class CustomButton extends StatelessWidget {
           decoration: BoxDecoration(
             color: fillColor ?? AppColors.primaryColorForFatoorah,
             borderRadius: BorderRadius.circular(radius ?? 8),
-            border: Border.all(color: borderColor ?? AppColors.primaryColorForFatoorah),
+            border: Border.all(
+              color: borderColor ?? AppColors.primaryColorForFatoorah,
+            ),
           ),
           child:
               prefixIcon == null

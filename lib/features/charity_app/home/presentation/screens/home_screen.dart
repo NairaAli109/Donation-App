@@ -1,4 +1,3 @@
-import 'package:donation_app/core/widgets/custom_assets_image.dart';
 import 'package:donation_app/core/widgets/spacer/vertical_spacer.dart';
 import 'package:donation_app/features/charity_app/home/presentation/widgets/banner_slider.dart';
 import 'package:donation_app/features/charity_app/home/presentation/widgets/categories_list.dart';

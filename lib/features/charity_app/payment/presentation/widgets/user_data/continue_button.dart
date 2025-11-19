@@ -3,10 +3,8 @@ import 'package:donation_app/core/widgets/custom_button.dart';
 import 'package:donation_app/core/widgets/custom_text.dart';
 import 'package:donation_app/features/charity_app/payment/cubit/payment/payment_cubit.dart';
 import 'package:donation_app/features/charity_app/payment/cubit/payment/payment_states.dart';
-import 'package:donation_app/features/charity_app/payment/presentation/screens/select_payment_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
 class ContinueButton extends StatelessWidget {
   const ContinueButton({super.key});

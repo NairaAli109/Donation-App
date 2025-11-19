@@ -12,6 +12,7 @@ class CustomSliderWithDots extends StatefulWidget {
     required this.imageHeight,
     this.imageClipRaduis,
     required this.isPositionedDots,
+    this.sliderItem,
   });
 
   final List<String> sliderImagesList;
@@ -19,6 +20,7 @@ class CustomSliderWithDots extends StatefulWidget {
   final double imageHeight;
   final double? imageClipRaduis;
   final bool isPositionedDots;
+  final Widget? sliderItem;
 
   @override
   State<CustomSliderWithDots> createState() => _CustomSliderWithDotsState();
@@ -35,6 +37,7 @@ class _CustomSliderWithDotsState extends State<CustomSliderWithDots> {
     final double imageHeight = widget.imageHeight;
     final double? imageClipRaduis = widget.imageClipRaduis;
     final bool isPositionedDots = widget.isPositionedDots;
+    final Widget? sliderItem = widget.sliderItem;
 
     return isPositionedDots
         ? Stack(
@@ -99,12 +102,14 @@ class _CustomSliderWithDotsState extends State<CustomSliderWithDots> {
                   sliderImages.map((img) {
                     return ClipRRect(
                       borderRadius: BorderRadius.circular(imageClipRaduis ?? 0),
-                      child: CustomAssetsImage(
-                        assetName: img,
-                        fit: BoxFit.cover,
-                        width: double.infinity,
-                        height: 533,
-                      ),
+                      child:
+                          sliderItem ??
+                          CustomAssetsImage(
+                            assetName: img,
+                            fit: BoxFit.cover,
+                            width: double.infinity,
+                            height: 533,
+                          ),
                     );
                   }).toList(),
             ),

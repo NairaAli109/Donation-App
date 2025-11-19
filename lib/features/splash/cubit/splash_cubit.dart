@@ -18,7 +18,7 @@ class SplashCubit extends Cubit<SplashStates> {
 
   Future<void> initApp(BuildContext context) async {
     await _changeAppLogo();
-    // await _getDeviceSerialNumber();
+    await _getDeviceSerialNumber();
     await _navigate(context);
   }
 
