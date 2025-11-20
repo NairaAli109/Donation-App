@@ -1,3 +1,4 @@
+import 'package:donation_app/core/helpers/general_functions.dart';
 import 'package:donation_app/core/theming/app_colors.dart';
 import 'package:donation_app/core/widgets/custom_assets_image.dart';
 import 'package:donation_app/core/widgets/custom_text.dart';
@@ -14,9 +15,11 @@ class SetupScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bool isTablet = GeneralFunctions.isTablet(context);
+
     return Scaffold(
       body: Padding(
-        padding: EdgeInsetsDirectional.only(start: 23.5, end: 23.5, ),
+        padding: EdgeInsetsDirectional.symmetric(horizontal:isTablet?516: 23.5),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

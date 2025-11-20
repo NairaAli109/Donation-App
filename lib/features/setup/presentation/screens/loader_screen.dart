@@ -1,3 +1,4 @@
+import 'package:donation_app/core/helpers/general_functions.dart';
 import 'package:donation_app/core/theming/app_colors.dart';
 import 'package:donation_app/core/widgets/custom_app_bar.dart';
 import 'package:donation_app/core/widgets/custom_text.dart';
@@ -30,10 +31,14 @@ class _LoaderScreenState extends State<LoaderScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final bool isTablet = GeneralFunctions.isTablet(context);
+
     return Scaffold(
       appBar: CustomAppBar(),
       body: Padding(
-        padding: EdgeInsetsDirectional.only(start: 24, end: 24),
+        padding: EdgeInsetsDirectional.symmetric(
+          horizontal: isTablet ? 516 : 24,
+        ),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

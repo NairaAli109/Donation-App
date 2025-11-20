@@ -1,21 +1,19 @@
-import 'package:donation_app/features/charity_app/charity_onboard/presentation/widgets/charity_details.dart';
-import 'package:donation_app/features/charity_app/charity_onboard/presentation/widgets/chrity_slider.dart';
+import 'package:donation_app/core/helpers/general_functions.dart';
+import 'package:donation_app/features/charity_app/charity_onboard/presentation/screens/mobile_charity_onboard.dart';
+import 'package:donation_app/features/charity_app/charity_onboard/presentation/screens/tablet_charity_onboard.dart';
 import 'package:flutter/material.dart';
 
-class CharityOnBoardScreen extends StatefulWidget {
+class CharityOnBoardScreen extends StatelessWidget {
   const CharityOnBoardScreen({super.key});
 
   @override
-  State<CharityOnBoardScreen> createState() => _CharityOnBoardScreenState();
-}
-
-class _CharityOnBoardScreenState extends State<CharityOnBoardScreen> {
-  @override
   Widget build(BuildContext context) {
+    final bool isTablet = GeneralFunctions.isTablet(context);
+
     return Scaffold(
       body: SizedBox(
         height: MediaQuery.of(context).size.height,
-        child: Stack(children: [CharitySlider(), CharityDetails()]),
+        child: isTablet ? TabletCharityOnboard() : MobileCharityOnboard(),
       ),
     );
   }

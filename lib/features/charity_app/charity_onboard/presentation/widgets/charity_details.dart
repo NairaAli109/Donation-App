@@ -16,67 +16,50 @@ class CharityDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-      top: 550,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      child: Container(
-        width: double.infinity,
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 48),
-        decoration: const BoxDecoration(
-          color: AppColors.backgroundColor,
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(24),
-            topRight: Radius.circular(24),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        CustomCircleAvatar(
+          child: CustomAssetsImage(
+            assetName: Assets.imagesBedayaCharityLogo,
           ),
         ),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
+        VerticalSpace(height: 16),
+        CustomText(
+          text: " جمعية بداية للأعمال الخيرية",
+          fontWeight: FontWeight.w700,
+          fontSize: 20,
+        ),
+        VerticalSpace(height: 8),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CustomCircleAvatar(
-              child: CustomAssetsImage(
-                assetName: Assets.imagesBedayaCharityLogo,
+            Flexible(
+              child: CustomText(
+                text: "بمساهمتك اليوم، تصنع فرقًا في حياة الكثيرين",
+                fontSize: 14,
+                color: AppColors.grey,
               ),
             ),
-            VerticalSpace(height: 16),
-            CustomText(
-              text: " جمعية بداية للأعمال الخيرية",
-              fontWeight: FontWeight.w700,
-              fontSize: 20,
-            ),
-            VerticalSpace(height: 8),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Flexible(
-                  child: CustomText(
-                    text: "بمساهمتك اليوم، تصنع فرقًا في حياة الكثيرين",
-                    fontSize: 14,
-                    color: AppColors.grey,
-                  ),
-                ),
-                HorizontalSpace(width: 4),
-                CustomSvgIcon(assetName: Assets.iconsCharityIcon),
-              ],
-            ),
-            VerticalSpace(height: 32),
-            Padding(
-              padding: EdgeInsetsDirectional.symmetric(horizontal: 16),
-              child: CustomButton(
-                text: "تبرع الان",
-                fillColor: AppColors.primaryColorForCharities,
-                textColor: AppColors.backgroundColor,
-                radius: 16,
-                onTap:
-                    () => context.pushNamedAndRemoveAll(
-                      AppRoutesNames.layoutScreen,
-                    ),
-              ),
-            ),
+            HorizontalSpace(width: 4),
+            CustomSvgIcon(assetName: Assets.iconsCharityIcon),
           ],
         ),
-      ),
+        VerticalSpace(height: 32),
+        Padding(
+          padding: EdgeInsetsDirectional.symmetric(horizontal: 16),
+          child: CustomButton(
+            text: "تبرع الان",
+            fillColor: AppColors.primaryColorForCharities,
+            textColor: AppColors.backgroundColor,
+            radius: 16,
+            onTap:
+                () => context.pushNamedAndRemoveAll(
+              AppRoutesNames.layoutScreen,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

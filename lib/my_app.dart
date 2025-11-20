@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    GeneralFunctions.setPreferredOrientation();
+    GeneralFunctions.setPreferredOrientation(context);
     return BlocProvider(
       create: (_) => getIt.get<LocaleCubit>(),
       child: BlocBuilder<LocaleCubit, Locale>(

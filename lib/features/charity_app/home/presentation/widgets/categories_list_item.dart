@@ -29,6 +29,9 @@ class CategoriesListItem extends StatelessWidget {
             children: [
               CustomSvgIcon(
                 assetName: cubit.categoriesIcons[index],
+                fit: BoxFit.cover,
+                width: 18,
+                height: 18,
                 color:
                     isSelected
                         ? AppColors.backgroundColor

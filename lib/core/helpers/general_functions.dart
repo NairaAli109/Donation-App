@@ -4,20 +4,34 @@ import 'package:flutter/services.dart';
 import 'package:logger/logger.dart';
 
 class GeneralFunctions {
-  static setPreferredOrientation() {
-    SystemChrome.setPreferredOrientations(
-        [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+  static setPreferredOrientation(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      // final shortestSide = MediaQuery.of(context).size.shortestSide;
+
+      if (isTablet(context)) {
+        // Tablet
+        SystemChrome.setPreferredOrientations(DeviceOrientation.values);
+      } else {
+        // Mobile
+        SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+      }
+    });
+  }
+
+  static bool isTablet(BuildContext context) {
+    final shortestSide = MediaQuery.of(context).size.shortestSide;
+    return shortestSide >= 600; // threshold for tablets
   }
 
   // RegExp
-  static bool isValidEmail(String email) =>
-      RegExp(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$')
-          .hasMatch(email);
+  static bool isValidEmail(String email) => RegExp(
+    r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$',
+  ).hasMatch(email);
 
   // RegExp
-  static bool isValidPassword(String password) =>
-      RegExp(r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$')
-          .hasMatch(password);
+  static bool isValidPassword(String password) => RegExp(
+    r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$',
+  ).hasMatch(password);
 
   static String? phoneValidator(String? value, {String? dialCode}) {
     if (value == null || value.trim().isEmpty) {
@@ -48,7 +62,8 @@ class GeneralFunctions {
 
   // Logger
   static Logger logger = Logger(
-      printer: PrettyPrinter(colors: true, printEmojis: true, methodCount: 0));
+    printer: PrettyPrinter(colors: true, printEmojis: true, methodCount: 0),
+  );
 
   // Check User Existence
   static Future<bool> checkIfUserLoggedIn() async {
@@ -61,5 +76,4 @@ class GeneralFunctions {
     // Navigator.of(context, rootNavigator: true)
     //     .pushNamedAndRemoveUntil(AppRoutesNames.login, (route) => false);
   }
-
 }

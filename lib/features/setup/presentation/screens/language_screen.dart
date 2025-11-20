@@ -1,4 +1,5 @@
 import 'package:donation_app/core/helpers/extensions.dart';
+import 'package:donation_app/core/helpers/general_functions.dart';
 import 'package:donation_app/core/helpers/localization/local_cubit.dart';
 import 'package:donation_app/core/routing/app_routes_names.dart';
 import 'package:donation_app/core/theming/app_colors.dart';
@@ -19,60 +20,62 @@ class LanguageScreen extends StatefulWidget {
 class _LanguageScreenState extends State<LanguageScreen> {
   @override
   Widget build(BuildContext context) {
+    final bool isTablet = GeneralFunctions.isTablet(context);
+
     return Scaffold(
       body: Padding(
-        padding: EdgeInsetsDirectional.symmetric(horizontal: 16),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              CustomText(
-                text: "اختر اللغة",
+        padding: EdgeInsetsDirectional.symmetric(
+          horizontal: isTablet ? 516 : 16,
+        ),
+        child:Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CustomText(
+              text: "اختر اللغة",
+              fontWeight: FontWeight.w700,
+              fontSize: 20,
+            ),
+            VerticalSpace(height: 16),
+            CustomText(
+              text:
+              ".أختر اللغة التي تفضلها  هذا يساعدنا على تقديم خدمة أفضل لك",
+              fontSize: 14,
+              color: AppColors.grey,
+            ),
+            VerticalSpace(height: 32),
+            Align(
+              alignment: Alignment.centerRight,
+              child: CustomText(
+                text: "حدد اللغة",
+                fontSize: 16,
                 fontWeight: FontWeight.w700,
-                fontSize: 20,
+                textAlign: TextAlign.start,
               ),
-              VerticalSpace(height: 16),
-              CustomText(
-                text:
-                    ".أختر اللغة التي تفضلها  هذا يساعدنا على تقديم خدمة أفضل لك",
-                fontSize: 14,
-                color: AppColors.grey,
-              ),
-              VerticalSpace(height: 32),
-              Align(
-                alignment: Alignment.centerRight,
-                child: CustomText(
-                  text: "حدد اللغة",
-                  fontSize: 16,
-                  fontWeight: FontWeight.w700,
-                  textAlign: TextAlign.start,
-                ),
-              ),
-              VerticalSpace(height: 10),
-              LangDropDown(),
-              VerticalSpace(height: 32),
-              CustomButton(
-                text: "استمرار",
-                onTap: () {
-                  var cubit = context.read<LocaleCubit>();
-                  if (cubit.selectedLanguage != null) {
-                    print(
-                      "cubit.selectedLanguage::: ${cubit.selectedLanguage}",
-                    );
-                    context.pushNamedAndRemoveAll(AppRoutesNames.setupScreen);
-                  } else {
-                    null;
-                  }
-                },
-              ),
-              VerticalSpace(height: 16),
-              CustomText(
-                text: "يمكنك تغيير اللغة لاحقًا من الإعدادات مع خدمة الدعم",
-                color: AppColors.grey,
-              ),
-            ],
-          ),
-
+            ),
+            VerticalSpace(height: 10),
+            LangDropDown(),
+            VerticalSpace(height: 32),
+            CustomButton(
+              height: isTablet ? 48 : 52,
+              text: "استمرار",
+              onTap: () {
+                var cubit = context.read<LocaleCubit>();
+                if (cubit.selectedLanguage != null) {
+                  print(
+                    "cubit.selectedLanguage::: ${cubit.selectedLanguage}",
+                  );
+                  context.pushNamedAndRemoveAll(AppRoutesNames.setupScreen);
+                } else {
+                  null;
+                }
+              },
+            ),
+            VerticalSpace(height: 16),
+            CustomText(
+              text: "يمكنك تغيير اللغة لاحقًا من الإعدادات مع خدمة الدعم",
+              color: AppColors.grey,
+            ),
+          ],
         ),
       ),
     );
